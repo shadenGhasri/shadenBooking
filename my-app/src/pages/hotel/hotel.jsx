@@ -1,3 +1,5 @@
+import "./hotel.scss"
+
 const Hotel = () => {
     return ( <p>hi</p> );
 }
