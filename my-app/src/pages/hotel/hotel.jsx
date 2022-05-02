@@ -1,5 +1,5 @@
 const Hotel = () => {
-    return ( <></> );
+    return ( <p>hi</p> );
 }
  
 export default Hotel;
