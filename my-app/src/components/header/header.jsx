@@ -15,6 +15,7 @@ import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
 
 const Header = () => {
+  const [openDate, setOpenDate] = useState(false);
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -22,11 +23,40 @@ const Header = () => {
       key: "selection",
     },
   ]);
-  const [openDate, setOpenDate] = useState(false);
+
+  const [openOptions, setOpenOptions] = useState(false);
+  const [options, setOptions] = useState({
+    adult: 1,
+    children: 0,
+    room: 1,
+  });
+
+  const handleOption = (name, operation)=>{
+    setOptions((prev) => {
+      return {
+        ...prev,
+        [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
+      };
+      
+      
+    })
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div className="header">
-      <div className="headerContainer ">
+      <div className="container headerContainer">
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
@@ -66,7 +96,10 @@ const Header = () => {
           </div>
           <div className="headerSearchItem">
             <FontAwesomeIcon icon={faBed} className="headerIcon" />
-            <span onClick={()=> setOpenDate(!openDate)} className="headerSearchText">
+            <span
+              onClick={() => setOpenDate(!openDate)}
+              className="headerSearchText"
+            >
               {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
                 date[0].endDate,
                 "MM/dd/yyyy"
@@ -84,7 +117,35 @@ const Header = () => {
           </div>
           <div className="headerSearchItem">
             <FontAwesomeIcon icon={faPerson} className="headerIcon" />
-            <span className="headerSearchText">room </span>
+            <span className="headerSearchText" onClick={()=>setOpenOptions(!openOptions)}>{`${options.adult} adult . ${options.children} children . ${options.room} room`}</span>
+            {
+              openOptions && (<div className="options">
+              <div className="optionItem">
+                <span className="optionText">adult</span>
+                <div className="optionCounter">
+                  <button className="optionCounterButton" onClick={()=>handleOption("adult","d")}  disabled={options.adult <= 1}>-</button>
+                  <span className="optionCounterNumber">{options.adult}</span>
+                  <button className="optionCounterButton" onClick={()=>handleOption("adult","i")}>+</button>
+                </div>
+              </div>
+              <div className="optionItem">
+                <span className="optionText">children</span>
+                <div className="optionCounter">
+                  <button className="optionCounterButton" onClick={()=>handleOption("children","d")}  disabled={options.children <= 0}>-</button>
+                  <span className="optionCounterNumber">{options.children}</span>
+                  <button className="optionCounterButton" onClick={()=>handleOption("children","i")}>+</button>
+                </div>
+              </div>
+              <div className="optionItem">
+                <span className="optionText">room</span>
+                <div className="optionCounter">
+                  <button className="optionCounterButton" onClick={()=>handleOption("room","d")} disabled={options.room <= 1}>-</button>
+                  <span className="optionCounterNumber">{options.room}</span>
+                  <button className="optionCounterButton" onClick={()=>handleOption("room","i")}>+</button>
+                </div>
+              </div>
+            </div>)
+            }
           </div>
           <div className="headerSearchItem">
             <button className="headerBtn">search</button>
