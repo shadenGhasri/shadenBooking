@@ -14,7 +14,7 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
 
-const Header = () => {
+const Header = ({type}) => {
   const [openDate, setOpenDate] = useState(false);
   const [date, setDate] = useState([
     {
@@ -45,18 +45,9 @@ const Header = () => {
 
 
 
-
-
-
-
-
-
-
-
-
   return (
     <div className="header">
-      <div className="container headerContainer">
+      <div className={type === "list" ? "container listMode" : "container headerContainer" }>
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
@@ -79,7 +70,9 @@ const Header = () => {
             <span>Airport taxis</span>
           </div>
         </div>
-        <h1 className="headerTitle">A lifetime of discounts? It's Genius.</h1>
+        {
+          type !== "list" && (<>
+            <h1 className="headerTitle">A lifetime of discounts? It's Genius.</h1>
         <p className="headerDesc">
           Get rewarded for your travels – unlock instant savings of 10% or more
           with a free Lamabooking account
@@ -151,6 +144,8 @@ const Header = () => {
             <button className="headerBtn">search</button>
           </div>
         </div>
+          </>)
+        }
       </div>
     </div>
   );

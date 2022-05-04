@@ -1,7 +1,12 @@
-import "./list.scss"
+import "./list.scss";
+import Navbar from "../../components/navbar/navbar";
+import Header from "../../components/header/header";
 
 const List = () => {
-    return ( <p>List</p>);
+    return (<>
+        <Navbar/>
+        <Header type = "list"/>
+    </>);
 }
  
 export default List;
