@@ -78,6 +78,7 @@ const Header = ({type}) => {
           with a free Lamabooking account
         </p>
         <button className="headerBtn">Sign in / Register</button>
+        
         <div className="headerSearch">
           <div className="headerSearchItem">
             <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
