@@ -3,6 +3,7 @@
     max-width: 1024px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
     z-index: 1;
 }
