@@ -10,8 +10,8 @@
 }
 
 .headerContainer {
-  // width: 100%;
-  // max-width: 1024px;
+  width: 100%;
+  max-width: 1024px;
   margin: 20px 0px 100px 0px;
 }
 
@@ -51,16 +51,16 @@
 }
 
 .headerSearch {
-  height: 40px;
+  height: 50px;
   background-color: white;
   border: 3px solid #febb02;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 30px;
+  // padding: 30px;
   border-radius: 5px;
   position: absolute;
-  bottom: -35px;
+  bottom: -25px;
   width: 100%;
   max-width: 1024px;
 }
