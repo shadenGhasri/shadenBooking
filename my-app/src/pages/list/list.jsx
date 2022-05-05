@@ -1,8 +1,18 @@
 import "./list.scss";
 import Navbar from "../../components/navbar/navbar";
 import Header from "../../components/header/header";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
+import { format } from "date-fns";
 
 const List = () => {
+  const location = useLocation();
+  console.log(location);
+  const [destination, setDestination] = useState(location.state.destination);
+  const [date, setDate] = useState(location.state.date);
+  const [options, setOptions] = useState(location.state.options);
+  const [openDate, setOpenDate] = useState(false);
+  
   return (
     <>
       <Navbar />
@@ -17,7 +27,10 @@ const List = () => {
             </div>
             <div className="lsItem">
               <label>Check-in Date</label>
-              <span>date</span>
+              <span>{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
+                date[0].endDate,
+                "MM/dd/yyyy"
+              )}`}</span>
             </div>
             <div className="lsItem">
               <label>Options</label>
