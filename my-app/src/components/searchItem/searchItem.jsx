@@ -1,12 +1,19 @@
 import "./searchItem.scss";
-
+import { useNavigate } from "react-router-dom";
 const SearchItem = ({source , title ,distance ,Subtitle ,price }) => {
+  const navigate = useNavigate()
+
+  const handleSearch = ()=>{
+    navigate("/hotels/:id")
+  }
+
     return(
         <div className="searchItem">
           <img
             src={source}
             alt=""
             className="siImg"
+            onClick={handleSearch}
           />
           <div className="siDesc">
             <h1 className="siTitle">{title}</h1>
@@ -31,7 +38,7 @@ const SearchItem = ({source , title ,distance ,Subtitle ,price }) => {
             <div className="siDetailTexts">
               <span className="siPrice">{price}</span>
               <span className="siTaxOp">Includes taxes and fees</span>
-              <button className="siCheckButton">See availability</button>
+              <button className="siCheckButton" onClick={handleSearch} >See availability</button>
             </div>
           </div>
         </div>
