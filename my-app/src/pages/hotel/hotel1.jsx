@@ -11,6 +11,7 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState , useContext} from "react";
+import dataContext from "../../context/data";
 
 
 const Hotel1 = () => {
@@ -25,8 +26,9 @@ const Hotel1 = () => {
 
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
-
-
+  
+  const datasetContext = useContext(dataContext)
+  console.log(datasetContext);
 
   const handleOpen = (i) => {
     setSlideNumber(i);
@@ -76,13 +78,13 @@ const Hotel1 = () => {
         )}
         <div className="hotelWrapper">
           <button className="bookNow">Reserve or Book Now!</button>
-          <h1 className="hotelTitle">Tower Street Apartments</h1>
+          <h1 className="hotelTitle">{datasetContext.data[0].title}</h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
-            <span>Elton St 125 New york</span>
+            <span>{datasetContext.data[0].distance}</span>
           </div>
           <span className="hotelDistance">
-            Excellent location – 500m from center
+            Excellent location – {datasetContext.data[0].Subtitle}
           </span>
           <span className="hotelPriceHighlight">
             Book a stay over $114 at this property and get a free airport taxi
@@ -123,7 +125,7 @@ const Hotel1 = () => {
                 excellent location score of 9.8!
               </span>
               <h2>
-                <b>$945</b> (9 nights)
+                <b>{datasetContext.data[0].price}</b> (9 nights)
               </h2>
               <button>Reserve or Book Now!</button>
             </div>
