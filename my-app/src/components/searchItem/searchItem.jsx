@@ -1,10 +1,25 @@
 import "./searchItem.scss";
 import { useNavigate } from "react-router-dom";
-const SearchItem = ({source , title ,distance ,Subtitle ,price }) => {
+
+
+const SearchItem = ({source , title ,distance ,Subtitle ,price ,id}) => {
   const navigate = useNavigate()
 
-  const handleSearch = ()=>{
-    navigate("/hotels/:id")
+  const handleSearch = (dataId)=>{
+    // console.log(dataId)
+    // navigate(`/hotels${dataId}/:id`, {state: dataId})
+    if(dataId === 1){
+      navigate("/hotels/code1")
+    }
+    if(dataId === 2){
+      navigate("/hotels/code2")
+    }
+    if(dataId === 3){
+      navigate("/hotels/code3")
+    }
+    if(dataId === 4){
+      navigate("/hotels/code4")
+    }
   }
 
     return(
@@ -38,7 +53,7 @@ const SearchItem = ({source , title ,distance ,Subtitle ,price }) => {
             <div className="siDetailTexts">
               <span className="siPrice">{price}</span>
               <span className="siTaxOp">Includes taxes and fees</span>
-              <button className="siCheckButton" onClick={handleSearch} >See availability</button>
+              <button className="siCheckButton" onClick={()=>handleSearch(id)} >See availability</button>
             </div>
           </div>
         </div>

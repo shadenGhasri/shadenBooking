@@ -10,9 +10,10 @@ import {
   faCircleXmark,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useState , useContext} from "react";
 
-const Hotel = () => {
+
+const Hotel1 = () => {
   const photos = [
     { src: "https://b2n.ir/m48300" },
     { src: "https://b2n.ir/h32073" },
@@ -21,14 +22,19 @@ const Hotel = () => {
     { src: "https://b2n.ir/d51360" },
     { src: "https://b2n.ir/d40895" },
   ];
+
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
+
 
 
   const handleOpen = (i) => {
     setSlideNumber(i);
     setOpen(true);
   };
+
+ 
+
 
   const handleMove = (direction) => {
     let newSlideNumber;
@@ -130,4 +136,6 @@ const Hotel = () => {
   );
 };
 
-export default Hotel;
+export default Hotel1;
+
+

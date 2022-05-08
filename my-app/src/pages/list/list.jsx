@@ -6,6 +6,8 @@ import { useState } from "react";
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import SearchItem from "../../components/searchItem/searchItem";
+import { useContext } from "react";
+import dataContext from "../../context/data";
 
 const List = () => {
   const location = useLocation();
@@ -14,42 +16,10 @@ const List = () => {
   const [date, setDate] = useState(location.state.date);
   const [options, setOptions] = useState(location.state.options);
   const [openDate, setOpenDate] = useState(false);
-  const [data,setData] = useState([
-    {
-      source : "https://b2n.ir/w60935",
-      title : "Tower Street Apartments",
-      distance : "500m from center",
-      Subtitle : "Studio Apartment with Air conditioning",
-      price : "$112",
-      id: 1
-    },
-    {
-      source : "https://b2n.ir/s09633",
-      title : "Summerland Sun Apartments",
-      distance : "1.9 km from centre",
-      Subtitle : "Providing a bar and a garden",
-      price : "$152",
-      id: 2
-    },
-    {
-      source : "https://b2n.ir/p90139",
-      title : "Catalina Summerland Apartment",
-      distance : "1.8 km from centre",
-      Subtitle : "Located 100 metres from Ammos Beach",
-      price : "$178",
-      id: 3
-    },
-    {
-      source : "https://b2n.ir/f27110",
-      title : "Sea View Penthouse Mamaia",
-      distance : "2 km from centre",
-      Subtitle : "Sea View Studio Mamaia is located in the Summerland Complex",
-      price : "$105",
-      id: 4
-    },
+  const datasetContext = useContext(dataContext)
+  console.log(datasetContext)
 
-  ])
-
+  
   return (
     <>
       <Navbar />
@@ -124,8 +94,8 @@ const List = () => {
           </div>
           <div className="listResult">
           {
-            data.map(elem => (
-              <SearchItem key={elem.id} source={elem.source}  title= {elem.title} distance={elem.distance} Subtitle={elem.Subtitle} price={elem.price} />
+            datasetContext && datasetContext.data.map(elem => (
+              <SearchItem key = {elem.id} source = {elem.source}  title = {elem.title} distance = {elem.distance} Subtitle = {elem.Subtitle} price = {elem.price} id = {elem.id} />
             ))
           }
           </div>
