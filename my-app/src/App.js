@@ -8,6 +8,7 @@ import Hotel2 from "./pages/hotel/hotel2";
 import Hotel3 from "./pages/hotel/hotel3";
 import Hotel4 from "./pages/hotel/hotel4";
 import NotFound from "./pages/NotFound/NotFound";
+import Login from "./pages/login/login";
 
 function App() {
   const [data, setData] = useState([
@@ -60,6 +61,7 @@ function App() {
           <Route path="/hotels/code2" element={<Hotel2/>} />
           <Route path="/hotels/code3" element={<Hotel3/>}/>
           <Route path="/hotels/code4" element={<Hotel4/>}/>
+          <Route path="/login" element={<Login/>} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
       </dataContext.Provider>

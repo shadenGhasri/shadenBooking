@@ -1,5 +1,5 @@
 import "./hotel.scss";
-import Navbar from "../../components/navbar/navbar";
+import Nav from "../../components/navbar/navbar";
 import Header from "../../components/header/header";
 import MailList from "../../components/mailList/mailList";
 import Footer from "../../components/footer/footer";
@@ -46,7 +46,7 @@ const Hotel3 = () => {
   };
   return (
     <>
-      <Navbar />
+      <Nav />
       <Header type="list" />
       <div className="hotelContainer">
         {open && (

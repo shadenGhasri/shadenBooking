@@ -1,5 +1,5 @@
 import "./list.scss";
-import Navbar from "../../components/navbar/navbar";
+import Nav from "../../components/navbar/navbar";
 import Header from "../../components/header/header";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -22,7 +22,7 @@ const List = () => {
   
   return (
     <>
-      <Navbar />
+      <Nav />
       <Header type="list" />
       <div className="listContainer">
         <div className="listWrapper">

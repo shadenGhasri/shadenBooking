@@ -1,0 +1,25 @@
+@mixin mediaStyle {
+    width: 70px;
+    height: 60px;
+}
+
+.form{
+    width: 400px;
+    height: 500px;
+    background-color: aqua;
+}
+
+.linkedin{
+    @include mediaStyle();
+    background-color: antiquewhite
+}
+
+.facebook{
+    @include mediaStyle();
+    background-color: rgb(77, 14, 136)
+}
+
+.google{
+    @include mediaStyle();
+    background-color: bisque;
+}

@@ -1,5 +1,5 @@
 import "./home.scss";
-import Navbar from "../../components/navbar/navbar";
+import Nav from "../../components/navbar/navbar";
 import Header from "../../components/header/header";
 import Featured from "../../components/featured/featured";
 import PropertyList from "../../components/propertyList/propertyList";
@@ -10,7 +10,7 @@ import Footer from "../../components/footer/footer";
 const Home = () => {
   return (
     <>
-      <Navbar />
+      <Nav />
       <Header />
       <div className="homeContainer">
         <Featured />
