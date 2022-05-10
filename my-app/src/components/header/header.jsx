@@ -53,7 +53,7 @@ const Header = ({ type }) => {
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
-            <NavLink to = "/" style = {({isActive})=>{
+            <NavLink to = "*" style = {({isActive})=>{
               return {
                 color : isActive ? "red" : "white" ,
                 textDecoration : "none"
@@ -62,7 +62,7 @@ const Header = ({ type }) => {
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faPlane} />
-            <NavLink to = "/" style = {({isActive})=>{
+            <NavLink to = "*" style = {({isActive})=>{
               return {
                 color : isActive ? "red" : "white" ,
                 textDecoration : "none"
@@ -71,7 +71,7 @@ const Header = ({ type }) => {
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faCar} />
-            <NavLink to = "/" style = {({isActive})=>{
+            <NavLink to = "*" style = {({isActive})=>{
               return {
                 color : isActive ? "red" : "white" ,
                 textDecoration : "none"
@@ -80,7 +80,7 @@ const Header = ({ type }) => {
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
-            <NavLink to = "/" style = {({isActive})=>{
+            <NavLink to = "*" style = {({isActive})=>{
               return {
                 color : isActive ? "red" : "white" ,
                 textDecoration : "none"
@@ -89,7 +89,7 @@ const Header = ({ type }) => {
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faTaxi} />
-            <NavLink to = "/" style = {({isActive})=>{
+            <NavLink to = "*" style = {({isActive})=>{
               return {
                 color : isActive ? "red" : "white" ,
                 textDecoration : "none"
