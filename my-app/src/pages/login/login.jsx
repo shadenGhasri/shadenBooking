@@ -5,19 +5,24 @@ const Login = () => {
         e.preventDefault();
     }
     return ( 
-        <form onSubmit={handleSubmit} className="form">
-            <h1>create an account</h1>
-            <input type="text" placeholder="Username"/>
-            <input type="password" name="" id="" placeholder="Password" />
-            <button>Login</button>
-            <p>forget Login?</p>
-            <p>---------- or ------------</p>
-            <div className="media row d-flex justify-content-center">
-                <div className="linkedin col-md-4"></div>
-                <div className="facebook col-md-4"></div>
-                <div className="google col-md-4"></div>
+        <form onSubmit={handleSubmit} className="form d-flex flex-column align-items-center">
+            <h1 className="mt-4">create an account</h1>
+            <input className="username mt-4" type="text" placeholder="Username"/>
+            <input className="password" type="password" name="" id="" placeholder="Password" />
+            <button className="login">Login</button>
+            <p className="mt-2">forget Login?</p>
+            {/* <div className="line">
+                <h3 className="section-title">or</h3>
+            </div> */}
+
+            <div className="media d-flex justify-content-center">
+                <div className="linkedin"><i className="bi bi-linkedin"></i></div>
+                <div className="facebook"><i className="bi bi-facebook"></i></div>
+                <div className="google"><i className="bi bi-google"></i></div>
             </div>
         </form>
+
+        
     );
 }
  

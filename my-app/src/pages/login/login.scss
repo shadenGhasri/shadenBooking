@@ -1,25 +1,89 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
 @mixin mediaStyle {
     width: 70px;
     height: 60px;
+    cursor: pointer;
+}
+@mixin itemStyle {
+    width: 300px;
+    height: 40px;
 }
 
 .form{
     width: 400px;
-    height: 500px;
-    background-color: aqua;
+    height: 400px;
+    margin-top: 80px;
+    background-color: rgba(255, 255, 255, 0.9);
+    
 }
 
-.linkedin{
-    @include mediaStyle();
-    background-color: antiquewhite
+.linkedin , .facebook , .google{
+    @include mediaStyle();    
 }
 
-.facebook{
-    @include mediaStyle();
-    background-color: rgb(77, 14, 136)
+
+.bi{
+    font-size: xx-large;
+    color: #003580;
+    padding-left: 1.25rem;
+}
+.username , .password{
+    @include itemStyle();
+    padding-left: 110px;
 }
 
-.google{
-    @include mediaStyle();
-    background-color: bisque;
+.login{
+    @include itemStyle();
+    background-color: #003580;
+    color: whitesmoke;
+    margin-top: 20px;
+    &:hover{
+        background-color:whitesmoke;
+        color:#003580;
+        border-color: 003580;
+    }
+}
+// .line{
+//     width: 200px;
+//     height: 10px;
+//     // background-color: beige;
+// }
+
+.section-title{
+    text-align: center;
+    padding: 25px;
+    font-size: 27px;
+    color: #003580;
+    margin-top: 1rem;
+}
+
+.section-title:before,
+.section-title:after {
+    background-color: black;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 5%;
+}
+
+.section-title:before {
+    right: 0.5rem;
+    margin-left: -50%;
+}
+
+.section-title:after {
+    left: 0.5rem;
+    margin-right: -50%;
 }
