@@ -3,12 +3,6 @@
     box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    background-color: aliceblue;
-}
-
 @mixin mediaStyle {
     width: 70px;
     height: 60px;
@@ -22,9 +16,11 @@ body{
 .form{
     width: 400px;
     height: 400px;
-    margin-top: 80px;
-    background-color: rgba(255, 255, 255, 0.9);
-    
+    background-color: aliceblue;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,25%);
 }
 
 .linkedin , .facebook , .google{
@@ -59,7 +55,6 @@ body{
     text-align: center;
     font-size: 20px;
     color: #003580;
-    // margin-top: 1rem;
 }
 
 .section-title::before,
