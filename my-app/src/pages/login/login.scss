@@ -57,29 +57,28 @@ body{
 
 .section-title{
     text-align: center;
-    padding: 25px;
-    font-size: 27px;
+    font-size: 20px;
     color: #003580;
     // margin-top: 1rem;
 }
 
-.section-title:before,
-.section-title:after {
+.section-title::before,
+.section-title::after {
     background-color: black;
     content: "";
     display: inline-block;
     height: 1px;
     position: relative;
     vertical-align: middle;
-    width: 5%;
+    width: 130px;
 }
 
-.section-title:before {
+.section-title::before {
     right: 0.5rem;
     margin-left: -50%;
 }
 
-.section-title:after {
+.section-title::after {
     left: 0.5rem;
     margin-right: -50%;
 }
