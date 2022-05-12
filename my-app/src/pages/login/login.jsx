@@ -62,7 +62,7 @@ const Login = () => {
         onSubmit={handleSubmit}
         className="form d-flex flex-column align-items-center"
       >
-        <h1 className="mt-4">create an account</h1>
+        <h1 className="mt-4">Sign in</h1>
         <input
           className="username mt-4"
           type="text"
@@ -79,8 +79,8 @@ const Login = () => {
           name="password"
           onChange={handleInput}
         />
-        <button className="login">Login</button>
-        <p className="mt-2">forget Login?</p>
+        <button className="login">Sign in</button>
+        <p className="mt-2">forgot your Password?</p>
         <div className="line">
           <h3 className="section-title">or</h3>
         </div>

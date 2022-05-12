@@ -38,6 +38,10 @@ const Header = ({ type }) => {
     navigate("/hotels", { state: { date, destination, options } });
   };
 
+  const handleSignIn = ()=>{
+    navigate("/login")
+  }
+
   const handleOption = (name, operation) => {
     setOptions((prev) => {
       return {
@@ -106,7 +110,7 @@ const Header = ({ type }) => {
               Get rewarded for your travels – unlock instant savings of 10% or
               more with a free Lamabooking account
             </p>
-            <button className="headerBtn__SignIn">Sign in </button>
+            <button className="headerBtn__SignIn" onClick={handleSignIn}>Sign in </button>
 
             <div className="headerSearch">
               <div className="headerSearchItem">

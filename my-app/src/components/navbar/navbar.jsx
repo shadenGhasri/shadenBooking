@@ -13,7 +13,7 @@ const Nav = () => {
         <span className="logo">ShadenBooking</span>
         <div className="navItems">
           <button className="navButton">Register</button>
-          <button className="navButton"  onClick={handleClick} >Login</button>
+          <button className="navButton"  onClick={handleClick} >Sign in</button>
         </div>
       </div>
     </div>
