@@ -2,7 +2,8 @@ import "./propertyList.scss";
 
 const PropertyList = () => {
   return (
-    <div className="pList row">
+    <div className="pList">
+      <div className="row">
       <div className="pListItem col-sm-2">
         <img
           src="https://cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o="
@@ -68,6 +69,7 @@ const PropertyList = () => {
           <h1>Cottages</h1>
           <h2>142,469 cottages</h2>
         </div>
+      </div>
       </div>
     </div>
   );
