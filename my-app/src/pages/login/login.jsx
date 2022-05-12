@@ -49,7 +49,7 @@ const Login = () => {
 
   return (
     <>
-      {/* {errors.length !== 0 && (
+      {errors && (
         <div className="alert alert-danger">
           <ul>
             {errors.map((e, i) => (
@@ -57,7 +57,7 @@ const Login = () => {
             ))}
           </ul>
         </div>
-      )} */}
+      )}
       <form
         onSubmit={handleSubmit}
         className="form d-flex flex-column align-items-center"
