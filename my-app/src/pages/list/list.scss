@@ -44,7 +44,7 @@
   padding: 5px;
 }
 .lsItem > span {
-  height: 30px;
+  height:auto;
   padding: 5px;
   background-color: white;
   display: flex;
@@ -81,3 +81,4 @@
 .listResult {
   flex: 3;
 }
+
