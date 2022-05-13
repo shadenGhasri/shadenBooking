@@ -1,19 +1,9 @@
 .fp {
   width: 100%;
   max-width: 1100px;
-  // display: flex;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
-  // gap: 20px;
 }
 
-.fpItem {
-  // flex: 1;
-  // gap: 10px;
-  // display: flex;
-  // flex-wrap: wrap;
-  // flex-direction: column;
-}
+
 
 .fpImg {
   width: 100%;
@@ -46,4 +36,12 @@
 
 .fpRating > span {
   font-size: 14px;
+}
+
+@media only screen and (max-width: 768px) {
+  .fpItem{
+      padding:0 1.5rem;
+      margin-top: 2rem;
+      width: 100%;
+  }
 }
