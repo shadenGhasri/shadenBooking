@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 .header {
@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 
-.headerBtn__SignIn{
+.headerBtn__SignIn {
   width: 100px;
   height: 40px;
   background-color: #0071c2;
@@ -64,7 +64,6 @@
   border: none;
   cursor: pointer;
 }
-
 
 // header search style
 
@@ -87,6 +86,13 @@
   align-items: center;
   gap: 10px;
   border: 3px solid #febb02;
+  background-color: white;
+}
+
+.item1,
+.item2,
+.item3 {
+  border-right: 0px;
 }
 
 .headerSearchInput {
@@ -144,7 +150,7 @@
   cursor: not-allowed;
 }
 
-.headerSearchBtn{
+.headerSearchBtn {
   background-color: #0071c2;
   color: white;
   display: flex;
@@ -154,4 +160,18 @@
   // &:hover{
   //  background-color: #003580;
   // }
+}
+
+@media only screen and (max-width: 768px) {
+  .headerSearch {
+    position: absolute;
+    bottom: 14px;
+    max-width: 300px;
+  }
+  .item1,
+  .item2,
+  .item3 {
+    border-right: 3px solid #febb02;
+    border-bottom: 0px;
+  }
 }

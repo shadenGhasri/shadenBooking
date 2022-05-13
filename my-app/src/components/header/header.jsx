@@ -143,7 +143,7 @@ const Header = ({ type }) => {
 
             <div className="box mx-2">
               <div className="headerSearch row">
-                <div className="headerSearchItem col-md-3">
+                <div className="headerSearchItem col-md-3 item1">
                   <FontAwesomeIcon
                     icon={faCalendarDays}
                     className="headerIcon"
@@ -155,7 +155,7 @@ const Header = ({ type }) => {
                     onChange={(e) => setDestination(e.target.value)}
                   />
                 </div>
-                <div className="headerSearchItem col-md-3">
+                <div className="headerSearchItem col-md-3 item2">
                   <FontAwesomeIcon icon={faBed} className="headerIcon" />
                   <span
                     onClick={() => setOpenDate(!openDate)}
@@ -176,7 +176,7 @@ const Header = ({ type }) => {
                     />
                   )}
                 </div>
-                <div className="headerSearchItem col-md-3">
+                <div className="headerSearchItem col-md-3 item3">
                   <FontAwesomeIcon icon={faPerson} className="headerIcon" />
                   <span
                     className="headerSearchText"
@@ -251,7 +251,7 @@ const Header = ({ type }) => {
                   )}
                 </div>
                 <button
-                  className="headerSearchItem col-md-3 headerSearchBtn"
+                  className="headerSearchItem col-md-3 headerSearchBtn item4"
                   onClick={handleSearch}
                 >
                   search
