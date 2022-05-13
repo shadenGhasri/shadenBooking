@@ -82,3 +82,8 @@
   flex: 3;
 }
 
+@media only screen and (max-width: 992px) {
+  .listSearch{
+    margin-left:1rem;
+  }
+}
