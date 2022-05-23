@@ -6,11 +6,36 @@ import PropertyList from "../../components/propertyList/propertyList";
 import FeaturedProperties from "../../components/featuredProperties/featuredProperties";
 import MailList from "../../components/mailList/mailList";
 import Footer from "../../components/footer/footer";
+import { useState, useEffect } from "react";
 
 const Home = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      setUser(null);
+      return;
+    }
+
+    const response = {
+      data: {
+        user: {
+          name: "shaden",
+          email: "shaden@gmail.com",
+        },
+      },
+    };
+    if (!response.data.user) {
+      setUser(null);
+      return;
+    }
+    setUser({ user: response.data.user });
+  },[]);
+
   return (
     <>
-      <Nav />
+      <Nav user={user} />
       <Header />
       <div className="homeContainer">
         <Featured />
@@ -19,7 +44,7 @@ const Home = () => {
         <h1 className="homeTitle">Homes guests love</h1>
         <FeaturedProperties />
         <MailList />
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
