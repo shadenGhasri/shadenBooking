@@ -11,7 +11,7 @@ const Nav = () => {
       <div className="navContainer">
         <span className="logo">ShadenBooking</span>
         <div className="navItems">
-          <button className="navButton">LogOut</button>
+          <button className="navButton">Log Out</button>
           <button className="navButton" onClick={handleClick}>
             Sign in
           </button>
